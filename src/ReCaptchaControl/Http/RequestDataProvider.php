@@ -10,18 +10,18 @@
 
 namespace ReCaptchaControl\Http;
 
-use Nette\Http\Request;
+use Nette\Http\IRequest;
 
 
 class RequestDataProvider implements IRequestDataProvider
 {
 
-	/** @var Request */
+	/** @var IRequest */
 	private $httpRequest;
 
 
-	/** @param  Request $httpRequest */
-	public function __construct(Request $httpRequest)
+	/** @param  IRequest $httpRequest */
+	public function __construct(IRequest $httpRequest)
 	{
 		$this->httpRequest = $httpRequest;
 	}
